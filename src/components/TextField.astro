@@ -1,0 +1,30 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+  textError: string;
+  errorStyle: string;
+  style: string;
+  type: string;
+};
+
+const {
+  textError,
+  errorStyle,
+  style,
+  class: className,
+  as: Tag,
+  ...attr
+} = Astro.props;
+---
+
+<div class="input-group | w-full" data-style={style}>
+  <Tag class:list={[className]} {...attr} />
+  <p
+    class:list={[
+      "invisible -mt-2 peer-invalid:visible sm:col-start-2",
+      errorStyle,
+    ]}
+  >
+    {textError}
+  </p>
+</div>

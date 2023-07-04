@@ -1,0 +1,17 @@
+---
+import MainHead from "./MainHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "@/components/Header.astro";
+import "../styles/cube.css";
+---
+
+<html lang="en">
+  <MainHead
+    title="Frontend Mentor | Fylo landing page with dark theme and features grid"
+  />
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

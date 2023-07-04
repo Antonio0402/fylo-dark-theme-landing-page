@@ -1,0 +1,57 @@
+---
+/* Library import */
+import { Icon } from "astro-icon";
+import Button from "./Button.astro";
+---
+
+<header class="header | bg-primary-intro pt-4 pb-8 sm:py-14 sm:px-0">
+  <nav class="nav | section-container relative" aria-label="Primary navigation">
+    <a
+      href="/"
+      class="nav__logo | [&>[astro-icon='logo']]:fill-[#BDBAFA] [.darkmode_&>[astro-icon='logo']]:fill-[#fff]"
+      aria-label="Go home"
+    >
+      <Icon name="logo" width="180" />
+    </a>
+    <ul
+      role="list"
+      class="nav__links | sm:text-lg text-xs"
+      aria-label="primary"
+    >
+      <li>
+        <a
+          class="text-light-gray [.darkmode_&]:hover:text-white hover:text-primary-main/50"
+          href="#Features">Features</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-light-gray [.darkmode_&]:hover:text-white hover:text-primary-main/50"
+          href="#Team">Team</a
+        >
+      </li>
+      <li>
+        <a
+          class="text-light-gray [.darkmode_&]:hover:text-white hover:text-primary-main/50"
+          href="#Sign">Sign In</a
+        >
+      </li>
+      <Button
+        as="button"
+        text=""
+        icon={{
+          name: "icon-toggle",
+          side: "right",
+        }}
+        style="toggle"
+        class="dark-mode-toggle"
+        id="dark-mode-toggle"
+      />
+      <div class="click-here">
+        <Icon name="icon-clickhere" />
+      </div>
+    </ul>
+  </nav>
+</header>
+
+<script src="../script/darkmode.ts"></script>

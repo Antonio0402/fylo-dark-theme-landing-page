@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon";
+import features from "../data/features.json";
+import { Image } from "@astrojs/image/components";
+---
+
+<section
+  class="features | section-container | my-0 [.darkmode_&]:bg-primary-main"
+>
+  <div class="features__container | [.darkmode_&]:bg-inherit">
+    {
+      features.map((item) => (
+        <div class="features__card">
+          <Icon
+            name={item.icon.name}
+            aria-label={`${item.icon.alt}-icon`}
+            width="100"
+            class="[&>[astro-icon]]:fill-white [.darkmode_&>[astro-icon]]:fill-[#181F2B]"
+          />
+          <div class="features__detail | space-y-2">
+            <h4>{item.title}</h4>
+            <p class="text-base max-w-[45ch]">{item.description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import { Icon } from "astro-icon";
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+  text: string;
+  style: "button" | "link" | "link-large" | "toggle";
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+};
+
+const { text, style, icon, class: className, as: Tag, ...attr } = Astro.props;
+---
+
+<Tag class:list={["btn ", className]} data-style={style} {...attr}>
+  {
+    icon && icon.side === "left" && (
+      <Icon name={icon.name} height="auto" width="auto" />
+    )
+  }
+  <span>{text}</span>
+  {
+    icon && icon.side === "right" && (
+      <Icon name={icon.name} height="auto" width="auto" />
+    )
+  }
+</Tag>

@@ -1,0 +1,33 @@
+---
+import Button from "@/components/Button.astro";
+import TextField from "@/components/TextField.astro";
+---
+
+<div class="cta-form__container | section-container">
+  <div class="cta-form__content">
+    <h2 class="text-700 mx-auto">Get early access today</h2>
+    <p class="text-sm mx-auto">
+      It only takes a minute to sign up and our free starter tier is extremely
+      generous. If you have any questions, our support team would be happy to
+      help you.
+    </p>
+    <form class="cta-form__input">
+      <TextField
+        as="input"
+        type="email"
+        placeholder="example@fylo.com"
+        aria-label="email input"
+        class="peer"
+        style="input"
+        textError="Please check your email"
+        errorStyle="text-sm text-accent-error"
+      />
+      <Button
+        data-size="md"
+        as="button"
+        text="Get Started For Free"
+        style="button"
+      />
+    </form>
+  </div>
+</div>

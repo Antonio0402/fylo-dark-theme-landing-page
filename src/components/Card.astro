@@ -1,0 +1,30 @@
+---
+import { Image } from "@astrojs/image/components";
+type Props = {
+  text: string;
+  author: string;
+  position: string;
+  index: number;
+};
+const { index, text, author, position } = Astro.props;
+---
+
+<figure class="card |">
+  <blockquote class="card__title | text-200 -tracking-card">{text}</blockquote>
+  <div class="card__content">
+    <Image
+      src={`images/profile-${index}.jpg`}
+      alt={`profile-${index}-picture`}
+      height={33}
+      width={33}
+      fit="cover"
+      quality={80}
+      format="avif"
+      class="mx-auto rounded-full"
+    />
+    <figcaption class="card__info | items-start">
+      <p class="text-[8px] font-bold">{author}</p>
+      <small class="text-light-gray text-[8px]">{position}</small>
+    </figcaption>
+  </div>
+</figure>

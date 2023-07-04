@@ -1,0 +1,107 @@
+---
+import { Icon } from "astro-icon";
+import Button from "./Button.astro";
+---
+
+<footer class="bg-primary-footer">
+  <div
+    class="footer__container | section-container | text-300 mx-auto text-light-gray space-y-8 sm:space-y-12"
+  >
+    <a
+      class="footer__logo | h-20 w-auto sm:h-10 justify-self-start | [&>[astro-icon='logo']]:fill-[#BDBAFA] [.darkmode_&>[astro-icon='logo']]:fill-[#fff]"
+      href="/"
+    >
+      <Icon name="logo" class="h-full" height="100%" width="100%" />
+    </a>
+    <div class="footer__content">
+      <div class="footer__contact |">
+        <div>
+          <Icon class="mr-4 inline-block" width="18" name="icon-location" />
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          </span>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <Icon class="mr-4 inline-block" width="18" name="icon-email" />
+            <span>Phone: +1-543-123-4567</span>
+          </div>
+          <div>
+            <Icon class="mr-4 inline-block" width="18" name="icon-phone" />
+            <span>example@fylo.com</span>
+          </div>
+        </div>
+      </div>
+      <nav class="footer__nav |">
+        <ul class="grid gap-2">
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]:hover:text-light"
+            href="#About Us">About Us</a
+          >
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]:hover:text-light"
+            href="#Jobs">Jobs</a
+          >
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]:hover:text-light"
+            href="#Press">Press</a
+          >
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]:hover:text-light"
+            href="#Blog">Blog</a
+          >
+        </ul>
+        <ul class="grid gap-2">
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]hover:text-light"
+            href="#Contact Us">Contact Us</a
+          >
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]hover:text-light"
+            href="#Terms">Terms</a
+          >
+          <a
+            class="hover:text-accent-cta-hover [.darkmode_&]hover:text-light"
+            href="#Privacy">Privacy</a
+          >
+        </ul>
+      </nav>
+      <div class="footer__social |">
+        <a
+          class="rounded-full w-10 border p-2 hover:cursor-pointer hover:text-accent-cta-hover"
+        >
+          <Icon width="100%" name="icon-facebook" />
+        </a>
+        <a
+          class="rounded-full w-10 border p-2 hover:cursor-pointer hover:text-accent-cta-hover"
+        >
+          <Icon cwidth="100%" name="icon-twitter" />
+        </a>
+        <a
+          class="rounded-full w-10 border p-2 hover:cursor-pointer hover:text-accent-cta-hover"
+        >
+          <Icon name="icon-instagram" width="100%" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<p class="attribution |">
+  Challenge by <a
+    href="https://www.frontendmentor.io?ref=challenge"
+    target="_blank">Frontend Mentor</a
+  >. Coded by <a href="#">Antonio</a>.
+</p>
+
+<style>
+  .attribution {
+    margin-inline: auto;
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+</style>

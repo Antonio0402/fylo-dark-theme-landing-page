@@ -1,0 +1,47 @@
+@layer base {
+  html {
+    @apply text-[length:87.5%];
+  }
+  body {
+    @apply font-body leading-normal;
+  }
+
+  .darkmode {
+    @apply text-light;
+  }
+
+  h2,
+  h3 {
+    @apply font-heading font-bold max-w-[30ch];
+  }
+
+  h2:is(h2) {
+    @apply text-800 leading-normal;
+  }
+
+  h3:is(h3) {
+    @apply text-700 leading-wide-1-58;
+  }
+
+  h4:is(h4) {
+    @apply font-heading text-600 md:tracking-subhead max-w-[55ch] font-bold;
+  }
+
+  p,
+  li,
+  dl {
+    @apply max-w-[70ch] font-normal;
+  }
+
+  a:not([class]) {
+    @apply text-light-gray;
+  }
+
+  /* a:hover {
+    @apply text-primary-main;
+  } */
+
+  a[data-element="nav"] {
+    @apply underline;
+  }
+}

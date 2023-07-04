@@ -1,0 +1,29 @@
+@layer components {
+  .btn[data-style="button"] {
+    @apply bg-accent-cta hover:bg-accent-cta-hover hover:text-opacity-80 focus-visible:bg-accent-cta-hover [&_span]:mx-auto;
+  }
+
+  .btn[data-size="md"] {
+    @apply px-8 py-3 min-w-max w-full sm:w-auto;
+  }
+  .btn[data-style="link"] {
+    @apply font-heading text-[length:clamp(0.786rem,0.25vw+1rem,1.143rem)] underline underline-offset-4 decoration-accent-cta-hover;
+  }
+
+  .btn[data-style="link-large"] {
+    @apply font-heading text-200 underline underline-offset-4 p-0
+    text-light-gray
+    hover:text-accent-cta
+    hover:decoration-accent-cta
+    [.darkmode_&]:hover:text-white
+    [.darkmode_&]:decoration-accent-cta-hover 
+    [.darkmode_&]:hover:decoration-white 
+    [&>[astro-icon='icon-arrow']]:w-8 
+    [&>[astro-icon='icon-arrow']]:aspect-square 
+    [&>[astro-icon='icon-arrow']]:hover:fill-[#1B2330];
+  }
+
+  .btn[data-style="toggle"] {
+    @apply grid col-span-full row-span-full space-x-0 z-10 text-accent-cta border-2 border-current p-1 bg-transparent rounded-md w-8 h-8;
+  }
+}

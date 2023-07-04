@@ -1,0 +1,61 @@
+@layer base {
+  :root {
+    /* colors primary */
+    --intro-email-signUp-fill: 0deg 0% 100%;
+    --main-fill: 238deg 22% 44%;
+    --footer-fill: 243deg 87% 12%;
+    --testimonials-fill: 238deg 22% 44%;
+
+    /* colors accent */
+    --text-light: 40deg 75% 98%;
+    --text-light-gray: 0deg 0% 75%;
+    --cta-gradient-1: 224deg 93% 58%;
+    --cta-gradient-2: 170deg 45% 43%;
+    --error: 333deg 71% 51%;
+
+    /* Font Family */
+    --ff-secondary: "Raleway", sans-serif;
+    --ff-primary: "Open sans", sans-serif;
+
+    /* Letter spacing */
+    --tracking-subhead: 0.02em;
+    --tracking-body: 0.005em;
+    --tracking-card: 0.04em;
+
+    /* Line height */
+    --leading-1-58: 1.58;
+    --leading-1-55: 1.55;
+    --leading-1-38: 1.38;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* colors primary */
+      /* --intro-email-signUp-fill: 217deg 28% 15%;
+      --main-fill: 218deg 28% 13%;
+      --footer-fill: 216deg 53% 9%;
+      --testimonials-fill: 219deg 30% 18%; */
+
+      /* colors accent */
+      /* --text-light: theme(colors.white);
+      --text-light-gray: theme(colors.white / 80);
+      --cta-gradient-1: 176deg 68% 64%;
+      --cta-gradient-2: 198deg 60% 50%;
+      --error: 0deg 100% 63%; */
+    }
+  }
+
+  .darkmode {
+    /* colors primary */
+    --intro-email-signUp-fill: 217deg 28% 15%;
+    --main-fill: 218deg 28% 13%;
+    --footer-fill: 216deg 53% 9%;
+    --testimonials-fill: 219deg 30% 18%;
+
+    /* colors accent */
+    --text-light: 0deg 0% 100%;
+    --cta-gradient-1: 176deg 68% 64%;
+    --cta-gradient-2: 198deg 60% 50%;
+    --error: 0deg 100% 63%;
+  }
+}

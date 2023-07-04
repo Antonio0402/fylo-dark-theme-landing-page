@@ -1,0 +1,32 @@
+---
+import Card from "./Card.astro";
+import cards from "../data/cards.json";
+import { Image } from "@astrojs/image/components";
+---
+
+<div class="testimonial relative | px-12 pb-80 sm:pb-[360px]">
+  <Image
+    src="./images/bg-quotes.png"
+    alt="background-curvy"
+    height={48}
+    width={60}
+    fit="cover"
+    quality={80}
+    format="avif"
+    class="absolute sm:-top-10 sm:-left-2 -top-6 -left-2 z-0 w-10 h-8 sm:h-12 sm:w-16"
+  />
+  <div
+    class="testimonial__container | relative | flex flex-col sm:flex-row justify-between z-10"
+  >
+    {
+      cards.map((item, index) => (
+        <Card
+          index={index + 1}
+          text={item.text}
+          author={item.author}
+          position={item.position}
+        />
+      ))
+    }
+  </div>
+</div>

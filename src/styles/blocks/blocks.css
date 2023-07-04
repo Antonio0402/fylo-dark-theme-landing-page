@@ -1,0 +1,40 @@
+@layer components {
+  .btn {
+    @apply flex place-items-center text-300 text-light font-bold py-[0.75em] px-[3em] sm:px-[4em] border-transparent [.darkmode_&]:rounded-full rounded space-x-4 cursor-pointer;
+
+    & (svg) {
+      @apply w-auto h-auto;
+    }
+  }
+
+  .features__card {
+    @apply grid gap-8 justify-items-center text-center;
+  }
+
+  .card {
+    @apply grid grid-flow-row gap-4 py-6 px-4 sm:py-10 sm:px-6 rounded shadow-lg [.darkmode_&]:shadow-sm [.darkmode_&]:shadow-light-gray/10 [.darkmode_&]:bg-primary-testimonials bg-white [.darkmode_&]:text-light-gray text-primary-main;
+  }
+
+  .card__content {
+    @apply flex gap-2 max-w-max items-center;
+  }
+
+  .click-here {
+    @apply absolute w-24 right-6 top-12 text-accent-cta-hover;
+  }
+
+  .cta-form__content {
+    @apply max-w-4xl w-full px-5 py-8 sm:px-16 sm:py-10 rounded-md bg-primary-main space-y-4 sm:space-y-9 text-center text-light shadow-2xl;
+  }
+
+  .input-group {
+    @apply space-y-2;
+    & > input {
+      @apply rounded [.darkmode_&]:rounded-full w-full border border-primary-intro py-4 px-4 text-sm invalid:border-accent-error focus:outline-none focus-visible:border-accent-error text-primary-main;
+    }
+
+    & > p {
+      @apply invisible -mt-2 text-sm text-accent-error text-left peer-invalid:visible sm:col-start-2;
+    }
+  }
+}
